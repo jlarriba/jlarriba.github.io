@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on jlarriba blog</title>
-    <link>https://jlarriba.es/posts/</link>
+    <link>https://blog.jlarriba.es/posts/</link>
     <description>Recent content in Posts on jlarriba blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jul 2020 10:30:26 +0200</lastBuildDate>
     
-	<atom:link href="https://jlarriba.es/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.jlarriba.es/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Summer Indolency</title>
-      <link>https://jlarriba.es/posts/summer-indolency/</link>
+      <link>https://blog.jlarriba.es/posts/summer-indolency/</link>
       <pubDate>Thu, 02 Jul 2020 10:30:26 +0200</pubDate>
       
-      <guid>https://jlarriba.es/posts/summer-indolency/</guid>
+      <guid>https://blog.jlarriba.es/posts/summer-indolency/</guid>
       <description>So here we are. 40 degrees on the thermometer for us poor lads of the south. It makes it difficult to live, to concentrate or even to breathe. But nevertheless I am still following the DHH news on twitter.
 He made public the technologies the server side backend of hey.com is based into and it is like a return to 2012. Ruby on Rails, monolithic, server side html rendering, no javascript.</description>
     </item>
     
     <item>
       <title>When postmoderns face capitalism</title>
-      <link>https://jlarriba.es/posts/pm-and-capitalism/</link>
+      <link>https://blog.jlarriba.es/posts/pm-and-capitalism/</link>
       <pubDate>Wed, 17 Jun 2020 16:05:56 +0200</pubDate>
       
-      <guid>https://jlarriba.es/posts/pm-and-capitalism/</guid>
+      <guid>https://blog.jlarriba.es/posts/pm-and-capitalism/</guid>
       <description>Today is going to be a funny story.
 David Heinemeier Hansson is the CTO of a small company called Basecamp and a very public figure in the field of software because it is the creator of Ruby on Rails.
 Currently, he is in the middle of a huge launch of their new product: HEY.com, an email service (innovative, uh?). This email service comes packed with innovative features, the most important one is that it does not support any know email protocol.</description>
@@ -34,20 +34,20 @@ Currently, he is in the middle of a huge launch of their new product: HEY.com, a
     
     <item>
       <title>Sun, Go and Java</title>
-      <link>https://jlarriba.es/posts/java-go-1/</link>
+      <link>https://blog.jlarriba.es/posts/java-go-1/</link>
       <pubDate>Sat, 13 Jun 2020 15:52:13 +0200</pubDate>
       
-      <guid>https://jlarriba.es/posts/java-go-1/</guid>
+      <guid>https://blog.jlarriba.es/posts/java-go-1/</guid>
       <description>This week has been sunny and hot down here, which is something after 2 years in the Netherlands I still are not very used to. I have been thinking a lot about programming languages (conclusions might appear on this very blog in the future).
 I grew up as a developer programming in Java. I have dedicated countless hours to the Java programming language. I also dedicated some time to Ruby (on Rails) back in 2008.</description>
     </item>
     
     <item>
       <title>My Thing</title>
-      <link>https://jlarriba.es/posts/my-thing/</link>
+      <link>https://blog.jlarriba.es/posts/my-thing/</link>
       <pubDate>Mon, 01 Jun 2020 16:29:26 +0200</pubDate>
       
-      <guid>https://jlarriba.es/posts/my-thing/</guid>
+      <guid>https://blog.jlarriba.es/posts/my-thing/</guid>
       <description>So, a new blog has born on the 21st century internet. No blogging platform, no Medium, no content aggregation, no social media. Just a good old fashioned web page where a guy rambles against things or supports other things. We&amp;rsquo;ll see.
 Who&amp;rsquo;s that me that is going to be the star of the thing? Software engineer, systems administrator, mix of both, father, lover. You can find all the interesting crap in my Linkedin profile, here is irrelevant.</description>
     </item>
