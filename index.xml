@@ -6,10 +6,20 @@
     <description>Recent content on jlarriba blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2020 10:30:26 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2020 11:36:30 +0100</lastBuildDate>
     
 	<atom:link href="https://blog.jlarriba.es/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I&#39;m Back</title>
+      <link>https://blog.jlarriba.es/posts/im-back/</link>
+      <pubDate>Sat, 28 Nov 2020 11:36:30 +0100</pubDate>
+      
+      <guid>https://blog.jlarriba.es/posts/im-back/</guid>
+      <description>In the beginning of time, this blog was hosted by myself in the rack servers I host in my garage. However, those rack servers, even if they make a nice homelab, are way too old (they were way too cheap) and are way too powerful to be powered one just to host my tiny blog.
+So I powered them down and moved the site to a Raspberry Pi 4 stored in a drawer.</description>
+    </item>
     
     <item>
       <title>Summer Indolency</title>
