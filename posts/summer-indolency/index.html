@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>Summer Indolency</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+<body>
+	<header>
+	===================<br>
+	== <a href="https://jlarriba.es/">jlarriba blog</a> ==<br>
+	===================
+	<div style="float: right;"></div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Summer Indolency</h1>
+			<b><time>02.07.2020 10:30</time></b>
+		       
+
+			<div>
+				<p>So here we are. 40 degrees on the thermometer for us poor lads of the south. It makes it difficult to live, to concentrate or even to breathe. But nevertheless I am still following the DHH news on twitter.</p>
+<p>He made public the technologies the server side backend of hey.com is based into and it is like a return to 2012. Ruby on Rails, monolithic, server side html rendering, no javascript. It has been largely critizised about the stack. We are in 2020, the age of distributed microservices and single page applications made in React (or whatever javascript framework that is being used now).</p>
+<p>But the truth is that the customers are reporting that it works very well, very smooth. No that they feel there is a difference with a SPA with a microservices backend. And, being reasonable, 2012 is not &ldquo;the past&rdquo; for the other engineering practices there. Of course there are things on that stack that I personally think that are abominable (like using a script, non-threaded, interpreted, dynamically typed and ultra-slow language for a server backend), but the whole concept of monolithic applications should not be considered deprecated yet.</p>
+<p>Of course we did really ugly monoliths in the past, and of course they were slow as hell and they should be considered legacy since the very first time they were put in production (with pages taking 12 seconds to load!). But the answer to that is not always going to microservices. A monolith can be well-done, efficient, quick and easy-to-deploy. And you don&rsquo;t introduce the complexities of distributed computing on your application.</p>
+<p>A reactive microservices application, with CQRS architecture and event-oriented (a distributed implementation of the actors model) is pure beauty, but not all the teams are able to implement that correctly, and then you will not have an application, but a nightmare.</p>
+<p>If your development team is good and senior enough, of course your microservices application will perform far better than the monolith. But if your development team is not that good and quite junior, don&rsquo;t ditch the monolith idea upfront because the microservices will devour you and you  will be rewarded with lots of sleepless nights.</p>
+<p>Maybe try to build a better monolith.</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/summer-indolency/">Summer Indolency</a></li>
+				
+				<li><a href="/posts/pm-and-capitalism/">When postmoderns face capitalism</a></li>
+				
+				<li><a href="/posts/java-go-1/">Sun, Go and Java</a></li>
+				
+				<li><a href="/posts/my-thing/">My Thing</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2020 <a href="https://jlarriba.es/"><b>jlarriba blog</b></a>.
+	<a href="https://github.com/jlarriba"><b>Github</b></a>.
+	<a href="mailto:juan@jlarriba.es"><b>Email me!</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>Sun, Go and Java</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+<body>
+	<header>
+	===================<br>
+	== <a href="https://jlarriba.es/">jlarriba blog</a> ==<br>
+	===================
+	<div style="float: right;"></div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Sun, Go and Java</h1>
+			<b><time>13.06.2020 15:52</time></b>
+		       
+
+			<div>
+				<p>This week has been sunny and hot down here, which is something after 2 years in the Netherlands I still are not very used to. I have been thinking a lot about programming languages (conclusions might appear on this very blog in the future).</p>
+<p>I grew up as a developer programming in Java. I have dedicated countless hours to the Java programming language. I also dedicated some time to Ruby (on Rails) back in 2008. It was really fun.</p>
+<p>I programmed A LOT in Javascript back in my time, before Javascript was considered a &ldquo;serious&rdquo; development language. We were doing Single Page Applications with jQuery, sweat and blood. There was also that nice time where I was developing 3D in Javascript with WebGL.</p>
+<p>More recently, since about three years, I have been programming in Go. As Go has never been the language of choice of the companies I worked for, I was never able to work on really big projects, as I did with Java, but only small system-things related to some site reliability engineer. One small app that kills a certain process, a Prometheus exporter for some kind of specialized hardware, you know.</p>
+<p>I have been comparing in my mind Java and Go, and the conclusions are kind of counter-intuitive. This happens almost every time you spend some time thinking thourougly about everything: your opinion might not be the same as the majority of Twitter&rsquo;s and thus it is &ldquo;counter-intuitive&rdquo;.</p>
+<p>I definitively love Go. It is a cute little language which generates native binaries, does not have Object Oriented Programming, it is very easy to start with, is statically-typed, can be run as script and it is garbage-collected. It is REALLY nice when you come from what we can call and &ldquo;enterprise java developer&rdquo;. It also can be written using nice CLI tools and a text editor.</p>
+<p>The services created with Go are small, with no memory overhead and they start really fast. I do not foresee leaving Go in the following future. I hope I get the opportunity to work in a big go-related project in some moment.</p>
+<p>However, liking Go does not make me hate Java. I hate the Java/Spring/Hibernate shit that is programmed (still with eclipse, most of the time) in the big IT consultancies. The prevalence of this enterprise applications, developed by hordes of mostly untrained and junior programmers, memory hogs and utterly slow, permeate the popular culture and make some twitter gurus and fanboys to reach the absurd axiom: <em>Java is slow</em>.</p>
+<p>Moreover, most of the people I have seen complaining about the slowness of Java suggest replacing it with&hellip; Python!! The Python web development framework Django created a lot of this kind of gremlins.</p>
+<p>As you might know, my fellow reader, Java is not slow at all. Of course is slower than C or C++, and of course it has the JVM memory overhead, but the HotSpot JIT compiler is so optimized now that it is crazy.</p>
+<p>If you dig into the Java (or JVM, there are a lot of other languages to choose from) world, you realize that for most of things Java, and the OO programming model are still very good. You always need to avoid the enterprisey-frameworks (mostly Spring and its nonsense reflection everywhere policy) and release your threads!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        myThread<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+        Runtime<span style="color:#f92672">.</span><span style="color:#a6e22e">getRuntime</span><span style="color:#f92672">().</span><span style="color:#a6e22e">addShutdownHook</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>
+                <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+                    logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Shutdown hook&#34;</span><span style="color:#f92672">);</span>
+                    <span style="color:#f92672">((</span>ConsumerRunnable<span style="color:#f92672">)</span> myConsumerRunnable<span style="color:#f92672">).</span><span style="color:#a6e22e">shutdown</span><span style="color:#f92672">();</span>
+                <span style="color:#f92672">}</span>
+        <span style="color:#f92672">));</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            latch<span style="color:#f92672">.</span><span style="color:#a6e22e">await</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;App got interrupted&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
+            logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;App is closing&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+</code></pre></div>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/summer-indolency/">Summer Indolency</a></li>
+				
+				<li><a href="/posts/pm-and-capitalism/">When postmoderns face capitalism</a></li>
+				
+				<li><a href="/posts/java-go-1/">Sun, Go and Java</a></li>
+				
+				<li><a href="/posts/my-thing/">My Thing</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2020 <a href="https://jlarriba.es/"><b>jlarriba blog</b></a>.
+	<a href="https://github.com/jlarriba"><b>Github</b></a>.
+	<a href="mailto:juan@jlarriba.es"><b>Email me!</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>
